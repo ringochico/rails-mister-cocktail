@@ -5,15 +5,20 @@
   </div>
 </div>
 
-<div class="content">
-  <div class="card-cocktail">
+
+<div class="container">
+  <div class="row">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <%= cocktail.name %>
-      <%= link_to "Detail" , cocktail_path(cocktail) %>
-      <% end %>
-  </div>
-
-
-
-</div>
-</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+          </div>
+          <%= link_to "Detail", cocktail_path(cocktail), class: 'card-link' %>
+          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <i class="fa fa-trash destroy_dose"></i>
+   <% end %>
+        </div>
+      </div>
+    <% end %>
