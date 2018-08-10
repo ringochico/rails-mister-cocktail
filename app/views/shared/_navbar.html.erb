@@ -7,16 +7,18 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Links -->
-    <%= link_to "Cocktail Creator" , new_cocktail_path %>
-    <%= link_to "Cocktails" , cocktails_path %>
 
+
+    <!-- Text Link-->
+    <a href="https://www.linkedin.com/in/larry-nevins-20923791/" target="_blank" class="navbar-wagon-item navbar-wagon-link">Hire me</a>
+    <a href="https://www.freitag.ch/en" target="_blank" class="navbar-wagon-item navbar-wagon-link">Buy me</a>
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
+            <li>Dog</li>
             <%= link_to "#" do %>
               <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
             <% end %>
@@ -36,7 +38,7 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
+        <li><a href="facebook.com">Some mobile link</a></li>
         <li><a href="#">Other one</a></li>
         <li><a href="#">Other one</a></li>
       </ul>
