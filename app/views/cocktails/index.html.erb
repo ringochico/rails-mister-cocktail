@@ -1,25 +1,24 @@
 <div class="banner">
   <div class="banner-content">
-    <h1>There is always time for a cocktail.</h1>
-    <a class="btn btn-success btn-lg">!<%= link_to "!", new_cocktail_path %></a>
-
+    <h1>Cocktails</h1>
+    <h5>Find your mix</h4>
+    <a class="btn btn-success btn-lg" href="/cocktails/new">Create a cocktail! </a>
   </div>
 </div>
 
 
+
 <div class="container">
-  <div class="row">
+  <h1 style="text-align: center;">Cocktails</h1>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-          <div class="card-description">
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, width: 400, height: 500, crop: :fill %>');">
+          <div class="card-category"></div>
+           <div class="card-description">
             <h2><%= cocktail.name %></h2>
           </div>
-          <%= link_to "Detail", cocktail_path(cocktail), class: 'card-link' %>
-          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-  <i class="fa fa-trash destroy_dose"></i>
-   <% end %>
+          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
         </div>
       </div>
-    <% end %>
+       <% end %>

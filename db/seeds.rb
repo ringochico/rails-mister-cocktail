@@ -5,9 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "water")
-Ingredient.create(name: "whiskey")
-Ingredient.create(name: "vodka")
+require 'net/http'
+require 'json'
+
+url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
+uri = URI(url)
+response = Net::HTTP.get(uri)
+JSON.parse(response)
+
