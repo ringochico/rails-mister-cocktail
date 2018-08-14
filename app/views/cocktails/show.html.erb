@@ -1,18 +1,41 @@
-<h2><%= @cocktail.name %></h2>
- <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<div class="wrapper">
+  <div class="container">
+    <div class="justify-content-drink-box">
+     <h1><%= @cocktail.name %></h1>
+     <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
-  <%= link_to "Back to all cocktails", root_path %>
-  <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-  <i class="fa fa-trash destroy_dose"></i>
-  <% end  %>
+      </div>
 
- <% @cocktail.doses.each do |dose| %>
+      <div class="justify-content"><h2>Preparation</h2>
+      <% @cocktail.doses.each do |dose| %>
+      <ul>
+        <%= dose.ingredient.name %>
+        <%= dose.description %>
+        </ul>
+      <% end %>
 
-            <%= dose.ingredient.name %>
-             <%= dose.description %>
+      </div>
 
-                <% end %>
+      <div class="list-inline">
 
+       <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %>
+
+
+      <%= link_to "Back to all cocktails", root_path %>
+
+
+      <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fa fa-trash destroy_dose"></i>
+      <% end %>
+
+      </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 

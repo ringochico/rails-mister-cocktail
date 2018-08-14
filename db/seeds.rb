@@ -13,3 +13,6 @@ uri = URI(url)
 response = Net::HTTP.get(uri)
 JSON.parse(response)
 
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
