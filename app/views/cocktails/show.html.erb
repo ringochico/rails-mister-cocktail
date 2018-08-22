@@ -1,22 +1,27 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="justify-content-drink-box">
-     <h1><%= @cocktail.name %></h1>
+
+<div class="show-container">
+  <div class="show-cocktail">
+
+    <h1><%= @cocktail.name %></h1>
      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
-      </div>
+  </div>
 
-      <div class="justify-content"><h2>Preparation</h2>
-      <% @cocktail.doses.each do |dose| %>
-      <ul>
+
+  <div class="show-doses">
+    <h2>Preparation</h2>
+    <% @cocktail.doses.each do |dose| %>
+      <ol>
         <%= dose.ingredient.name %>
         <%= dose.description %>
-        </ul>
+        </ol>
       <% end %>
 
-      </div>
+  </div>
+  </div>
 
-      <div class="list-inline">
+
+      <div class="list-inline-menu">
 
        <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %>
 
@@ -29,13 +34,6 @@
       <% end %>
 
       </div>
-
-
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 

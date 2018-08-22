@@ -1,15 +1,20 @@
-.container {
+.show-container {
   display: flex;
-  align-items: stretch;
-
+  justify-content:center;
 }
 
-.justify-content {
-  background-color: lightgray;
-
-}
-
-.justify-content-drink-box {
+.show-doses {
+  color: white;
+  background-color: #21b35c61;
+  font-size: 24px;
   text-align: center;
+  box-shadow: 2px 3px 4px #b0c1b652;
+  padding-right: 19px;
+  margin-top: 4px;
 }
 
+.list-inline-menu {
+    text-align: center;
+    padding: 20px;
+    margin: 25px;
+}

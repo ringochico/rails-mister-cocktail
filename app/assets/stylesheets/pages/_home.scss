@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+
+
+.container {
+  justify-content: space-between;
+  display: flex;
+  align-items: stretch;
+}
+.cocktail-list {
+  text-align: center;
+  color: #1a5043;
+  font-family: monospace;
+}

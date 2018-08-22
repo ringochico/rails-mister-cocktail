@@ -1,5 +1,8 @@
+
 <div class="banner">
+
   <div class="banner-content">
+     <h1>Mister Cocktail</h1>
     <p> <span id="banner-typed-text"></span>
     </p>
 
@@ -8,15 +11,15 @@
 </div>
 
 
-
-<div class="container">
-
-  <div class="cocktail-list" class="cocktail-list-head text-center">
+<div class="cocktail-list" class="cocktail-list-head text-center">
   <h2>Cocktails</h2>
    </div>
+<div class="container">
+
+
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(253, 253, 253, 0.33), rgba(222, 186, 207, 0.06)), url('<%= cl_image_path cocktail.photo, width: 350, height: 400, crop: :fill %>');">
           <div class="card-category">Popular</div>
            <div class="card-description">
@@ -27,3 +30,4 @@
       </div>
        <% end %>
      </div>
+</div>

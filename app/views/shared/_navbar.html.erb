@@ -10,24 +10,19 @@
 
 
     <!-- Text Link-->
-    <a href="https://www.linkedin.com/in/larry-nevins-20923791/" target="_blank" class="navbar-wagon-item navbar-wagon-link">Hire me</a>
-    <a href="https://www.freitag.ch/en" target="_blank" class="navbar-wagon-item navbar-wagon-link">Buy me</a>
+    <a href="https://www.linkedin.com/in/larry-nevins-20923791/" target="_blank" class="navbar-wagon-item navbar-wagon-link">Owner</a>
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <%= image_tag "laundry.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
-            <li>Dog</li>
-            <%= link_to "#" do %>
-              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
+            <%= link_to "Make a cocktail", new_cocktail_path  %>
+
+
           </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-            <% end %>
-          </li>
+
+
         </ul>
       </div>
     </div>
